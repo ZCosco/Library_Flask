@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="bg-dark text-light text-center shadow">
+    <div class="container p-5 bg-dark">
+        <div class="row">
+            <div class="d-md-flex bg-dark align-items-center justify-content-evenly">
+                <h1 class="col text-center"><br>Zach's Library</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light text-center">
+    <div class="container">
+        <div class="book-grid">
+            {% for book in books %}
+            <div class="book">
+            <img src="{{ url_for('static', filename='images/' + book.isbn + '.jpg') }}" alt="Book Cover">
+                <div class="book-details">
+                    <h2>{{ book.title }}</h2>
+                    <p>Author: {{ book.author_name }}</p>
+                    <p>ISBN: {{ book.isbn }}</p>
+                    <p>Length: {{ book.book_length }}</p>
+                    <p>Year of Release: {{ book.year_of_release }}</p>
+                    <p>In Stock: {{ book.in_stock }}</p>
+                </div>
+            </div>
+{% endfor %}
+
+
+        </div>
+    </div>
+    
+
+</section>
+{% endblock %}

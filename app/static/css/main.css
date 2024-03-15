@@ -1,0 +1,62 @@
+*,*:before,*::after{ 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: inherit; 
+  }
+
+body {
+  padding-top: 50px;
+}
+
+.container {
+  padding: 20px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  grid-gap: 20px; 
+}
+
+.book {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.book-image {
+  width: 150px; 
+  height: auto;
+  margin-right: 20px; 
+}
+
+.book-details {
+  flex: 1; 
+  margin-top: 20%;
+}
+
+.custom-navbar {
+  background-color: #007bff; 
+  padding: 10px 20px; 
+  border: none; 
+}
+
+.custom-nav-items .nav-link {
+  color: #fff !important; 
+  font-weight: bold; 
+}
+
+.custom-nav-items .nav-link:hover {
+  color: #f0f0f0 !important; 
+}
+
+.custom-nav-items .nav-item {
+  margin-right: 20px; 
+}
+
+.navbar-brand {
+  margin-right: 20px; 
+}
+
+
